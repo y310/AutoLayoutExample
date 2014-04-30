@@ -21,6 +21,7 @@
 		464CE60E19075A0800E91094 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 464CE5F019075A0800E91094 /* UIKit.framework */; };
 		464CE61619075A0800E91094 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 464CE61419075A0800E91094 /* InfoPlist.strings */; };
 		464CE61819075A0800E91094 /* AutoLayoutExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 464CE61719075A0800E91094 /* AutoLayoutExampleTests.m */; };
+		A00E44CBAEC147159E5576C8 /* libPods-AutoLayoutExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA434509A4D64EC296120C1C /* libPods-AutoLayoutExample.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		26934C4A757549C397CFF6E6 /* Pods-AutoLayoutExample.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoLayoutExample.xcconfig"; path = "Pods/Pods-AutoLayoutExample.xcconfig"; sourceTree = "<group>"; };
 		464CE5E919075A0800E91094 /* AutoLayoutExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoLayoutExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		464CE5EC19075A0800E91094 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		464CE5EE19075A0800E91094 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -53,6 +55,7 @@
 		464CE61319075A0800E91094 /* AutoLayoutExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AutoLayoutExampleTests-Info.plist"; sourceTree = "<group>"; };
 		464CE61519075A0800E91094 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		464CE61719075A0800E91094 /* AutoLayoutExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AutoLayoutExampleTests.m; sourceTree = "<group>"; };
+		EA434509A4D64EC296120C1C /* libPods-AutoLayoutExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AutoLayoutExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +66,7 @@
 				464CE5EF19075A0800E91094 /* CoreGraphics.framework in Frameworks */,
 				464CE5F119075A0800E91094 /* UIKit.framework in Frameworks */,
 				464CE5ED19075A0800E91094 /* Foundation.framework in Frameworks */,
+				A00E44CBAEC147159E5576C8 /* libPods-AutoLayoutExample.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +90,7 @@
 				464CE61119075A0800E91094 /* AutoLayoutExampleTests */,
 				464CE5EB19075A0800E91094 /* Frameworks */,
 				464CE5EA19075A0800E91094 /* Products */,
+				26934C4A757549C397CFF6E6 /* Pods-AutoLayoutExample.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +110,7 @@
 				464CE5EE19075A0800E91094 /* CoreGraphics.framework */,
 				464CE5F019075A0800E91094 /* UIKit.framework */,
 				464CE60B19075A0800E91094 /* XCTest.framework */,
+				EA434509A4D64EC296120C1C /* libPods-AutoLayoutExample.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -159,9 +165,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 464CE61B19075A0800E91094 /* Build configuration list for PBXNativeTarget "AutoLayoutExample" */;
 			buildPhases = (
+				E4DA1CFBA08847D2A42C28FC /* Check Pods Manifest.lock */,
 				464CE5E519075A0800E91094 /* Sources */,
 				464CE5E619075A0800E91094 /* Frameworks */,
 				464CE5E719075A0800E91094 /* Resources */,
+				D2700D18CAD34BE788D31B71 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -244,6 +252,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D2700D18CAD34BE788D31B71 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-AutoLayoutExample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E4DA1CFBA08847D2A42C28FC /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		464CE5E519075A0800E91094 /* Sources */ = {
@@ -374,6 +415,7 @@
 		};
 		464CE61C19075A0800E91094 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26934C4A757549C397CFF6E6 /* Pods-AutoLayoutExample.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -387,6 +429,7 @@
 		};
 		464CE61D19075A0800E91094 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26934C4A757549C397CFF6E6 /* Pods-AutoLayoutExample.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -457,6 +500,7 @@
 				464CE61D19075A0800E91094 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		464CE61E19075A0800E91094 /* Build configuration list for PBXNativeTarget "AutoLayoutExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +509,7 @@
 				464CE62019075A0800E91094 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
